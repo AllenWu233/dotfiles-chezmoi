@@ -1,0 +1,124 @@
+return {
+  "nvimdev/dashboard-nvim",
+  opts = function()
+    local lazyvim_logo = [[
+       ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
+       ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
+       ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
+       ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
+       ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║           
+       ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝           
+    ]]
+
+    local allenvim_logo = [[
+ █████╗ ██╗     ██╗     ███████╗███╗   ██╗██╗   ██╗██╗███╗   ███╗
+██╔══██╗██║     ██║     ██╔════╝████╗  ██║██║   ██║██║████╗ ████║
+███████║██║     ██║     █████╗  ██╔██╗ ██║██║   ██║██║██╔████╔██║
+██╔══██║██║     ██║     ██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║  ██║███████╗███████╗███████╗██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+    ]]
+
+    local gensokyo_logo = [[
+    ,gg,                                                                                       
+  i8""8i                                                    ,dPYb,                            
+  `8,,8'                                                    IP'`Yb                            
+    `Y88aaad8                                                I8  8I                            
+    d8""""Y8,                                               I8  8bgg,                         
+    ,8P     8b  ,ggg,    ,ggg,,ggg,     ,g,       ,ggggg,    I8 dP" "8  gg     gg    ,ggggg,   
+    dP      Y8 i8" "8i  ,8" "8P" "8,   ,8'8,     dP"  "Y8ggg I8d8bggP"  I8     8I   dP"  "Y8ggg
+_ ,dP'      I8 I8, ,8I  I8   8I   8I  ,8'  Yb   i8'    ,8I   I8P' "Yb,  I8,   ,8I  i8'    ,8I  
+"888,,_____,dP `YbadP' ,dP   8I   Yb,,8'_   8) ,d8,   ,d8'  ,d8    `Yb,,d8b, ,d8I ,d8,   ,d8'  
+a8P"Y888888P" 888P"Y8888P'   8I   `Y8P' "YY8P8PP"Y8888P"    88P      Y8P""Y88P"888P"Y8888P"    
+                                                                            ,d8I'             
+                                                                          ,dP'8I              
+                                                                          ,8"  8I              
+                                                                          I8   8I              
+                                                                          `8, ,8I              
+                                                                          `Y8P"               
+    ]]
+
+    local ass_we_can_logo = [[
+      /$$$$$$                           /$$      /$$                  /$$$$$$                     
+    /$$__  $$                         | $$  /$ | $$                 /$$__  $$                    
+    | $$  \ $$  /$$$$$$$ /$$$$$$$      | $$ /$$$| $$  /$$$$$$       | $$  \__/  /$$$$$$  /$$$$$$$ 
+    | $$$$$$$$ /$$_____//$$_____/      | $$/$$ $$ $$ /$$__  $$      | $$       |____  $$| $$__  $$
+    | $$__  $$|  $$$$$$|  $$$$$$       | $$$$_  $$$$| $$$$$$$$      | $$        /$$$$$$$| $$  \ $$
+    | $$  | $$ \____  $$\____  $$      | $$$/ \  $$$| $$_____/      | $$    $$ /$$__  $$| $$  | $$
+    | $$  | $$ /$$$$$$$//$$$$$$$/      | $$/   \  $$|  $$$$$$$      |  $$$$$$/|  $$$$$$$| $$  | $$
+    |__/  |__/|_______/|_______/       |__/     \__/ \_______/       \______/  \_______/|__/  |__/
+    ]]
+
+    local pikachu = [[
+                ▀████▀▄▄              ▄█ 
+                  █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ 
+          ▄        █          ▀▀▀▀▄  ▄▀  
+         ▄▀ ▀▄      ▀▄              ▀▄▀  
+        ▄▀    █     █▀   ▄█▀▄      ▄█    
+        ▀▄     ▀▄  █     ▀██▀     ██▄█   
+         ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  
+          █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  
+         █   █  █      ▄▄           ▄▀   
+    ]]
+
+    -- Setting logo here --
+    local logo = allenvim_logo
+
+    logo = string.rep("\n", 8) .. logo .. "\n\n"
+
+    local opts = {
+      theme = "doom",
+      hide = {
+        -- this is taken care of by lualine
+        -- enabling this messes up the actual laststatus setting after loading a file
+        statusline = false,
+      },
+      config = {
+        header = vim.split(logo, "\n"),
+      -- stylua: ignore
+      center = {
+        { action = 'lua LazyVim.pick()()',                           desc = " Find File",       icon = " ", key = "f" },
+        { action = "ene | startinsert",                              desc = " New File",        icon = " ", key = "n" },
+        { action = 'lua LazyVim.pick("oldfiles")()',                 desc = " Recent Files",    icon = " ", key = "r" },
+        { action = 'lua LazyVim.pick("live_grep")()',                desc = " Find Text",       icon = " ", key = "g" },
+        { action = 'lua LazyVim.pick.config_files()()',              desc = " Config",          icon = " ", key = "c" },
+{
+      action = pick,
+      desc = " Projects",
+      icon = " ",
+      key = "p",
+    },
+        { action = 'lua require("persistence").load()',              desc = " Restore Session", icon = " ", key = "s" },
+        { action = "LazyExtras",                                     desc = " Lazy Extras",     icon = " ", key = "x" },
+        { action = "Lazy",                                           desc = " Lazy",            icon = "󰒲 ", key = "l" },
+        { action = function() vim.api.nvim_input("<cmd>qa<cr>") end, desc = " Quit",            icon = " ", key = "q" },
+      },
+        footer = function()
+          local stats = require("lazy").stats()
+          local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+          return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+        end,
+      },
+    }
+
+    for _, button in ipairs(opts.config.center) do
+      button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
+      button.key_format = "  %s"
+    end
+
+    -- open dashboard after closing lazy
+    if vim.o.filetype == "lazy" then
+      vim.api.nvim_create_autocmd("WinClosed", {
+        pattern = tostring(vim.api.nvim_get_current_win()),
+        once = true,
+        callback = function()
+          vim.schedule(function()
+            vim.api.nvim_exec_autocmds("UIEnter", { group = "dashboard" })
+          end)
+        end,
+      })
+    end
+
+    return opts
+  end,
+}

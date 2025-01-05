@@ -1,0 +1,364 @@
+# Allen's personal i3wm config
+
+# font for window titles and bar
+# font pango:JetBrainsMono Nerd Font Mono 12
+font pango:Sans Serif 12
+
+# use super(win) key as mod key
+set $mod Mod4
+
+# define names for workspaces
+set $ws1    "1"
+set $ws2    "2" 
+set $ws3    "3"
+set $ws4    "4" 
+set $ws5    "5"
+set $ws6    "6"
+set $ws7    "7"
+set $ws8    "8"
+set $ws9    "9"
+set $ws10   "10"
+
+
+# Special workspace settings for multiple monitors
+# workspace 1 output HDMI-A-0
+# workspace 2 output HDMI-A-0
+# workspace 3 output HDMI-A-0
+# workspace 4 output HDMI-A-0
+# workspace 5 output eDp
+# workspace 6 output eDp
+# workspace 7 output eDp
+# workspace 8 output eDp
+
+
+# Screen, border and gaps
+# use $mod+Mouse to drag floating windows to their wanted position
+floating_modifier $mod
+
+# control focused window when follows the mouse movements
+focus_follows_mouse no
+
+# window border settings
+default_border          pixel 2
+default_floating_border none
+smart_borders on
+
+# hiding borders adjacent to the screen edges
+# hide_edge_borders both
+# new_window normal 0
+# new_float normal 0
+
+# set popups during fullscreen mode
+popup_during_fullscreen smart
+
+# i3-gaps
+# smart_gaps off
+gaps inner 0
+gaps outer 0
+
+
+# Keybingdings
+# quick start
+bindsym $mod+Return workspace $ws1; exec --no-startup-id alacritty  # start a terminal on workspace 1
+bindsym $mod+f workspace $ws2; exec --no-startup-id firefox
+bindsym $mod+Shift+f workspace $ws2; exec --no-startup-id firefox -private-window
+bindsym $mod+n workspace $ws3; exec --no-startup-id electron-netease-cloud-music; exec --no-startup-id "killall waylyrics; waylyrics"
+bindsym $mod+w exec --no-startup-id rofi -show drun -dpi 1
+bindsym $mod+Tab exec --no-startup-id rofi -show window -dpi 1  # switching window with win+tab
+bindsym Control+Mod1+b exec --no-startup-id rofi-bluetooth -dpi 1
+bindsym Control+Mod1+n exec --no-startup-id networkmanager_dmenu -dpi 1
+bindsym Control+Mod1+l exec --no-startup-id "sh ~/.config/rofi/powermenu.sh"
+bindsym $mod+b workspace $ws6; exec --no-startup-id dolphin
+bindsym $mod+m exec --no-startup-id rofimoji -a type
+
+# kill focused window
+bindsym $mod+q kill
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+h   focus left
+bindsym $mod+j   focus down
+bindsym $mod+k   focus up
+bindsym $mod+l   focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+h    move left
+bindsym $mod+Shift+j    move down
+bindsym $mod+Shift+k    move up
+bindsym $mod+Shift+l    move right
+
+# split in horizontal orientation
+bindsym $mod+g split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+F11 fullscreen toggle
+
+# change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+d layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+Shift+a focus child
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# show the next scratchpad window or hide the focused scratchpad window
+bindsym $mod+minus scratchpad show
+
+# move focused floating window to the center of all outputs
+bindsym $mod+Shift+g move absolute position center
+
+# move focused floating window to the current position of the cursor
+bindsym $mod+Shift+m move position mouse
+
+# set a window to stick to the glass
+bindsym $mod+Shift+s sticky toggle
+
+# sticky preview for media
+bindsym $mod+Shift+i fullscreen disable; floating enable; resize set 350 px 197 px; sticky enable; move window to position 1006 px 537 px
+
+# jump to urgent window
+bindsym $mod+x [urgent=latest] focus
+
+# shortcut to change window border
+bindsym $mod+t border normal    0
+bindsym $mod+y border pixel     3
+bindsym $mod+u border none
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# lock
+bindsym Control+l exec --no-startup-id i3lock-fancy
+
+# Take a full screenshot store in file
+bindsym $mod+p exec --no-startup-id "spectacle -f -b"
+bindsym $mod+Shift+p exec --no-startup-id "spectacle -r -b"
+#bindsym $mod+Shift+p exec --no-startup-id "scrot ~/Pictures/screenshot/%Y-%m-%d-%T-screenshot.png"
+#bindsym $mod+Shift+p exec --no-startup-id "flameshot gui"
+#bindsym $mod+Shift+e exec --no-startup-id "scrot -s"
+
+# volume
+bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute        exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+ 
+# light
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
+
+# notification
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace
+bindsym $mod+Shift+r restart
+
+# manage i3 session
+
+# resize window
+bindsym $mod+r mode "  "
+mode "  " {
+
+    # same bindings, but for the arrow keys
+    bindsym h    resize shrink width 4 px or 4 ppt
+    bindsym j    resize grow height 4 px or 4 ppt
+    bindsym k    resize shrink height 4 px or 4 ppt
+    bindsym l    resize grow width 4 px or 4 ppt
+
+    # back to normal: Enter or win+r
+    bindsym Return mode "default"
+    bindsym $mod+r mode "default"
+}
+
+
+# client color
+# #546735 -> #81a1c1
+# class                 border  backgr. text    indicator child_border
+client.focused          #81a1c1 #81a1c1 #F8F8F2 #81a1c1   #81a1c1
+client.focused_inactive #2E3440 #2E3440 #F8F8F2 #2E3440   #2E3440
+client.unfocused        #2E3440 #2E3440 #BFBFBF #2E3440   #2E3440
+client.urgent           #2E3440 #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #2E3440 #2E3440 #F8F8F2 #2E3440   #2E3440
+client.background       #F8F8F2
+
+
+# Set specific windows to floating mode
+for_window [window_role="app"]                      floating enable
+for_window [window_role="pop-up"]                   floating enable
+for_window [window_role="task_dialog"]              floating enable
+
+for_window [title="Preferences$"]                   floating enable
+for_window [title="Picture-in-Picture"]             floating enable sticky enable
+
+for_window [class="xdman-Main"] floating enable
+for_window [class="java-lang-Thread"] floating enable
+for_window [class="VirtualBox"] floating enable
+for_window [class="VirtualBox Machine"] floating enable
+for_window [class="VirtualBox Manager"] floating disable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Qalculate-gtk"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [class="steam"] floating enable
+for_window [title="^Steam$"] floating disable
+for_window [class="words-picker"] floating enable
+# for_window [class="icalingua"] floating enable
+for_window [class="stacer"] floating enable
+for_window [class="Virt-manager"] floating enable
+# for_window [class="TelegramDesktop"] floating enable
+for_window [class="Quickgui"] floating enable
+for_window [class="R_x11"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Geph"] floating enable
+for_window [class="kdeconnect-app"] floating enable
+for_window [class="KDE_Connect"] floating enabl
+for_window [class="^mpv"] floating enable
+for_window [class="NewsFlashGTK"] floating enable
+for_window [class="PrismLauncher"] floating enable
+for_window [class="zoom"] floating enable
+for_window [class="wemeetapp"] floating enable
+for_window [class="fsearch"] floating enable
+for_window [class="Fsearch"] floating enable
+for_window [class="kvantummanager"] floating enable
+for_window [class="Kvantum Manager"] floating enable
+for_window [class="Kvantum Preview"] floating enable
+for_window [class="cmake-gui"] floating enable
+for_window [class="CMakeSetup"] floating enable
+for_window [class="Tlp-UI"] floating enable
+for_window [class="steamwebhelper"] floating enable
+for_window [class="wechat"] floating enable  # wechat-beta window
+for_window [class="spectacle"] floating enable
+
+set $floating_size_x 2560 
+set $floating_size_y 1560
+# upper left corner: (x,y)
+set $floating_position_x 0
+set $floating_position_y 40
+
+for_window [class="^feh$"] floating enable border none 
+for_window [class="^feh$"] resize set $floating_size_x $floating_size_y
+for_window [class="^feh$"] move window to position $floating_position_x $floating_position_y
+
+for_window [class="gwenview"] floating enable border none 
+for_window [class="gwenview"] resize set $floating_size_x $floating_size_y
+for_window [class="gwenview"] move window to position $floating_position_x $floating_position_y
+
+for_window [class="okular"] floating enable border none 
+for_window [class="okular"] resize set $floating_size_x $floating_size_y
+for_window [class="okular"] move window to position $floating_position_x $floating_position_y
+
+# WPS excel
+for_window [class="^et$"] floating enable border none
+for_window [class="^et$"] resize set $floating_size_x $floating_size_y
+for_window [class="^et$"] move window to position $floating_position_x $floating_position_y
+
+# WPS ppt
+for_window [class="^wpp$"] floating enable border none
+for_window [class="^wpp$"] resize set $floating_size_x $floating_size_y
+for_window [class="^wpp$"] move window to position $floating_position_x $floating_position_y
+
+# # WPS word
+for_window [class="^wps$"] floating enable border none
+for_window [class="^wps$"] resize set $floating_size_x $floating_size_y
+for_window [class="^wps$"] move window to position $floating_position_x $floating_position_y
+
+for_window [class="QQ"] floating enable border none
+for_window [class="QQ"] resize set $floating_size_x $floating_size_y
+for_window [class="QQ"] move window to position $floating_position_x $floating_position_y
+
+
+# Waylyrics
+for_window [class="waylyrics"] floating enable border none sticky enable 
+# for_window [class="waylyrics"] resize set 1600 200
+for_window [class="waylyrics"] move window to position 480 1380
+# for_window [class="waylyrics"] move window to position 480 1200
+no_focus [class="waylyrics"]
+
+
+# Assign settings - Special worksapce for applications
+assign [class="thunderbird"] $ws10
+assign [class="steam"] $ws4
+assign [class="hmcl"] $ws5
+assign [class="dolphin"] $ws6
+assign [class="TelegramDesktop"] $ws8
+assign [class="wechat"] $ws9
+assign [class="^QQ$"] $ws9
+assign [class="jetbrains-idea-ce"] $ws7
+
+# Minecraft
+assign [class="No Flesh Within Chest"] $ws5
+assign [class="Minecraft"] $ws5
+
+
+# Startup
+
+# Applications
+exec --no-startup-id dunst
+exec --no-startup-id redshift
+# exec --no-startup-id i3-msg 'workspace 10; exec thunderbird; workspace 1'
+# exec --no-startup-id xrdb -merge ~/.xresources
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
+
+
+# Screen settings
+# exec_always --no-startup-id xrandr --output HDMI-0 --mode 2560x1440 --rate 144 --dpi 96 --output eDP-1-1 --off  # only one screen
+exec --no-startup-id xrandr --output eDP-1-1 --mode 2560x1600 --dpi 144
+# exec_always --no-startup-id ~/.local/bin/xrandr-recover.sh
+
+
+# Other scrips
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id bash ~/scrips/rime-sync.sh
+# exec_always --no-startup-id fcitx5
+exec_always --no-startup-id bash ~/.config/polybar/launch.sh
+exec_always --no-startup-id bash ~/.xprofile
+exec_always --no-startup-id syndaemon -i 0.5 -t -K -R  # Avoid touching the touchpad accidentally
+exec_always --no-startup-id xmodmap ~/.Xmodmap
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
+
+
+# Wallpaper
+set $wp-arch1 ~/Pictures/Archlinux/uwp36741.png
+set $wp-rumia ~/Pictures/Picture/东方/108077785_p0.png
+set $wp-a ~/Pictures/Picture/东方/86548110_p0.jpg
+set $wp-b ~/Pictures/Picture/东方/1693670271537.png
+set $wp-tatara-kogasa ~/Pictures/47516247_p0_pro.jpg 
+
+exec_always --no-startup-id feh --bg-fill $wp-arch1
+# exec_always --no-startup-id linux-wallpaperengine 824586497 --silent --screen-root HDMI-0

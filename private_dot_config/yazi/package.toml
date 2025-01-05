@@ -1,0 +1,12 @@
+[plugin]
+deps = [
+    { use = "h-hg/yamb", rev = "108347b" },
+    { use = "ndtoan96/ouch", rev = "b869886" },
+    { use = "orhnk/system-clipboard", rev = "7775a80" }, { use = "GrzegorzKozub/mdcat", rev = "d3d5089" },
+]
+
+[flavor]
+deps = [
+    { use = "yazi-rs/flavors:catppuccin-mocha", rev = "8458d25" },
+    { use = "yazi-rs/flavors:catppuccin-latte", rev = "8458d25" },
+]
