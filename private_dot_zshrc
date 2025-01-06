@@ -195,6 +195,7 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # fzf
 alias fpcache="pacman -Qq | fzf --preview 'ls /var/cache/pacman/pkg/{}-[0-9]*.pkg.tar.zst'"
+alias ffont="fc-list | fzf"
 
 # config
 alias i3c='nvim ~/.config/i3/config'
@@ -209,11 +210,11 @@ alias -s bz2='tar -xjvf'
 # Tools
 #
 if [ ! -n "$DISPLAY" ]; then # If in TTY console
-    export STARSHIP_CONFIG=~/.config/starship-tty.toml
-    export ZELLIJ_CONFIG_FILE=~/.config/zellij/config-tty.kdl
+    export STARSHIP_CONFIG=~/.config/starship/starship_tty.toml
+    export ZELLIJ_CONFIG_FILE=~/.config/zellij/config_tty.kdl
     eval "$(zellij setup --generate-auto-start zsh)"
-# else
-#     export STARSHIP_CONFIG=~/.config/starship-jetpack.toml
+else
+    export STARSHIP_CONFIG=~/.config/starship/starship_nerd_font_symbols.toml
 fi
 
 # eval "$(zellij setup --generate-auto-start zsh)"
