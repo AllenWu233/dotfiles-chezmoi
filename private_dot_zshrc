@@ -197,6 +197,11 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 alias fpcache="pacman -Qq | fzf --preview 'ls /var/cache/pacman/pkg/{}-[0-9]*.pkg.tar.zst'"
 alias ffont="fc-list | fzf"
 
+# chezmoi
+alias chr="chezmoi re-add"
+alias cha="chezmoi add"
+alias chg="chezmoi git --"
+
 # config
 alias i3c='nvim ~/.config/i3/config'
 
@@ -243,4 +248,13 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	\rm -f -- "$tmp"
+}
+
+# Create a Zellij instance with a useful session name
+# either uses the current directory name, 
+# or a parameter as the session_name variable. 
+# It then tries to join an existing zellij session with that name, or creates a new one
+function za() {
+  local session_name=${1:-${PWD:t}}
+  zellij attach "$session_name" || zellij -s "$session_name"
 }

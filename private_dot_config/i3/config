@@ -7,16 +7,16 @@ font pango:Noto Sans CJK SC 11.5
 set $mod Mod4
 
 # define names for workspaces
-set $ws1    "1"
-set $ws2    "2" 
-set $ws3    "3"
-set $ws4    "4" 
-set $ws5    "5"
-set $ws6    "6"
-set $ws7    "7"
-set $ws8    "8"
-set $ws9    "9"
-set $ws10   "10"
+set $ws1    "1: "
+set $ws2    "2: " 
+set $ws3    "3:󰝚 "
+set $ws4    "4:󰓓 " 
+set $ws5    "5:󰍳 "
+set $ws6    "6: "
+set $ws7    "7:󱓩 "
+set $ws8    "8: "
+set $ws9    "9:󰭹 "
+set $ws10   "10: "
 
 
 # Special workspace settings for multiple monitors
@@ -269,23 +269,27 @@ client.background        $base
 # client.background       #F8F8F2
 
 # bar
-# bar {
-#     font pango:Noto Sans CJK SC 13
-#     status_command i3status
-#     position top
-#     colors {
-#         background         $base
-#         statusline         $text
-#         focused_statusline $text
-#         focused_separator  $base
-#
-#         # target           border bg        text
-#         focused_workspace  $base  $mauve    $crust
-#         active_workspace   $base  $surface2 $text
-#         inactive_workspace $base  $base     $text
-#         urgent_workspace   $base  $red      $crust
-#     }
-# }
+bar {
+    # font pango:Sarasa Term SC 13
+    font pango:Iosevka Nerd Font 13
+    status_command i3status-rs
+    tray_output none
+    strip_workspace_numbers yes
+
+    position top
+    colors {
+        background         $base
+        statusline         $text
+        focused_statusline $text
+        focused_separator  $base
+
+        # target           border bg        text
+        focused_workspace  $base  $mauve    $crust
+        active_workspace   $base  $surface2 $text
+        inactive_workspace $base  $base     $text
+        urgent_workspace   $base  $red      $crust
+    }
+}
 
 # Set specific windows to floating mode
 set $floating_size_x 2550
@@ -441,7 +445,7 @@ exec --no-startup-id xrandr --output eDP-1-1 --mode 2560x1600 --dpi 144
 # exec_always --no-startup-id pkill picom; picom --config ~/.config/picom/picom-ftlabs-pr41.conf
 exec_always --no-startup-id pkill picom; picom --config ~/.config/picom/picom.conf
 exec --no-startup-id bash ~/scrips/rime-sync.sh
-exec_always --no-startup-id bash ~/.config/polybar/launch.sh
+# exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 exec_always --no-startup-id bash ~/.xprofile
 
 # Avoid touching the touchpad accidentally
