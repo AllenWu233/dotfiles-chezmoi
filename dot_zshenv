@@ -2,7 +2,7 @@
 typeset -U path
 path=(
     ~/bin
-    ~/scrips
+    ~/scripts
     ~/.local/bin
     ~/.cargo/bin
     ~/software_and_tools/plum
