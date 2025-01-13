@@ -4,6 +4,12 @@
   display: none;
 }
 
+/* Hide header for Sidebar */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+  #sidebar-header {
+  display: none;
+}
+
 /* 隐藏收藏夹书签文字，只显示favicon，当鼠标悬停时展开该书签文字 
 #personal-bookmarks .bookmark-item > .toolbarbutton-text { display:none !important; }
 #personal-bookmarks .bookmark-item:hover > .toolbarbutton-text { display:block !important; }*/

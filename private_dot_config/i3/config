@@ -187,10 +187,14 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume @DEFA
 bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute        exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym $mod+Down    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+Up    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
  
 # light
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
+# bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
+# bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
+bindsym $mod+Right exec --no-startup-id brightnessctl -c backlight set +5%
+bindsym $mod+Left exec --no-startup-id brightnessctl -c backlight set 5%-
 
 # vim-anywhere
 bindsym $mod+Mod1+v exec --no-startup-id ~/.vim-anywhere/bin/run
@@ -273,7 +277,7 @@ bar {
     # font pango:Sarasa Term SC 13
     font pango:Iosevka Nerd Font 13
     status_command i3status-rs
-    tray_output none
+    # tray_output none
     strip_workspace_numbers yes
 
     position top
