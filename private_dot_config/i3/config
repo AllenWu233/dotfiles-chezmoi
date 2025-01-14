@@ -76,9 +76,9 @@ bindsym $mod+b workspace $ws6; exec --no-startup-id dolphin
 # bindsym $mod+m exec --no-startup-id rofimoji -a type
 bindsym $mod+m exec --no-startup-id rofi -modi "emoji:rofimoji" -show emoji -dpi 1
 
-# scrips
-bindsym $mod+F1 exec --no-startup-id "sh ~/scrips/toggle_left_click_hold.sh"
-bindsym $mod+F2 exec --no-startup-id "sh ~/scrips/toggle_right_click_hold.sh"
+# scripts
+bindsym $mod+F1 exec --no-startup-id "sh ~/scripts/toggle_left_click_hold.sh"
+bindsym $mod+F2 exec --no-startup-id "sh ~/scripts/toggle_right_click_hold.sh"
 
 
 # kill focused window
@@ -445,10 +445,10 @@ exec --no-startup-id xrandr --output eDP-1-1 --mode 2560x1600 --dpi 144
 
 
 
-# Other scrips
+# Other scripts
 # exec_always --no-startup-id pkill picom; picom --config ~/.config/picom/picom-ftlabs-pr41.conf
 exec_always --no-startup-id pkill picom; picom --config ~/.config/picom/picom.conf
-exec --no-startup-id bash ~/scrips/rime-sync.sh
+# exec --no-startup-id bash ~/scripts/rime-sync.sh
 # exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 exec_always --no-startup-id bash ~/.xprofile
 
@@ -457,7 +457,7 @@ exec_always --no-startup-id syndaemon -i 0.5 -t -K -R
 
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
-# exec_always --no-startup-id ~/scrips/auto-laptop-keyboard-and-touchboard.sh
+# exec_always --no-startup-id ~/scripts/auto-laptop-keyboard-and-touchboard.sh
 
 
 # Wallpaper
@@ -469,5 +469,5 @@ set $wp-tatara-kogasa ~/Pictures/47516247_p0_pro.jpg
 
 # exec_always --no-startup-id feh --bg-fill $wp-mystia
 # exec_always --no-startup-id linux-wallpaperengine 824586497 --silent --screen-root HDMI-0
-exec --no-startup-id bash ~/scrips/random-wallpaper.sh
+exec --no-startup-id bash ~/scripts/random-wallpaper.sh
 
