@@ -362,8 +362,8 @@ for_window [class="thunderbird"] floating enable
 for_window [class="KeePassXC"] floating enable 
 for_window [class="PDManer"] floating disable 
 
-for_window [class="^meteo-qt$"] floating enable
-for_window [class="^meteo-qt$" title="^天气状况$"] move window to position 1800 100
+# for_window [class="^meteo-qt$"] floating enable
+# for_window [class="^meteo-qt$" title="^天气状况$"] move window to position 1800 100
 
 for_window [class="^feh$"] floating enable
 # for_window [class="^feh$"] resize set $floating_size_x $floating_size_y
