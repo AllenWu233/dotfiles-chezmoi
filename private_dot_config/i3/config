@@ -38,7 +38,7 @@ floating_modifier $mod
 focus_follows_mouse no
 
 # window border settings
-default_border          pixel 2
+default_border pixel 2
 # default_floating_border none
 smart_borders on
 
@@ -436,6 +436,7 @@ exec --no-startup-id numlockx
 exec --no-startup-id i3-msg 'exec --no-startup-id thunderbird'
 # exec --no-startup-id i3-msg 'exec --no-startup-id qbittorrent'
 # exec_always --no-startup-id imwheel
+exec --no-startup-id anacron -s -t "${HOME}/.local/etc/anacrontab" -S "${HOME}/.local/var/spool/anacron"
 
 
 # Screen settings
