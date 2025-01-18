@@ -215,11 +215,11 @@ alias -s bz2='tar -xjvf'
 # Tools
 #
 if [ ! -n "$DISPLAY" ]; then # If in TTY console
-    export STARSHIP_CONFIG=~/.config/starship/starship_tty.toml
-    export ZELLIJ_CONFIG_FILE=~/.config/zellij/config_tty.kdl
+    export STARSHIP_CONFIG=~/.config/starship/starship-tty.toml
+    export ZELLIJ_CONFIG_FILE=~/.config/zellij/config-tty.kdl
     eval "$(zellij setup --generate-auto-start zsh)"
 else
-    export STARSHIP_CONFIG=~/.config/starship/starship_nerd_font_symbols.toml
+    export STARSHIP_CONFIG=~/.config/starship/starship-nerd-font-symbols.toml
 fi
 
 # eval "$(zellij setup --generate-auto-start zsh)"
