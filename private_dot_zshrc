@@ -144,7 +144,9 @@ source ~/.zoxide
 # Options
 #
 # setopt EXTENDED_HISTORY
-
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M viins '^v' edit-command-line
 
 # Aliases
 #
