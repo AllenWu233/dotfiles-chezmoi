@@ -66,6 +66,7 @@ bindsym $mod+n workspace $ws3; exec --no-startup-id electron-netease-cloud-music
 # bindsym $mod+n workspace $ws3; exec --no-startup-id /opt/YesPlayMusic/yesplaymusic; exec --no-startup-id "killall waylyrics; waylyrics"
 # bindsym $mod+n workspace $ws3; exec --no-startup-id spotify; exec --no-startup-id "killall waylyrics; waylyrics"
 bindsym $mod+w exec --no-startup-id rofi -show drun -dpi 1
+bindsym $mod+Shift+w exec --no-startup-id ~/scripts/random-wallpaper.sh
 bindsym $mod+Tab exec --no-startup-id rofi -show window -dpi 1  # switching window with win+tab
 bindsym Control+Mod1+b exec --no-startup-id rofi-bluetooth -dpi 1
 bindsym Control+Mod1+n exec --no-startup-id networkmanager_dmenu -dpi 1
