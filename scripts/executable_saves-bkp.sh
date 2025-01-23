@@ -5,9 +5,13 @@
 #
 # Usage: saves-bkp.sh
 #
-BACKUP_DIR="$HOME/Games/Games/VintageStory/saves/robinson-crusoe"
+# BACKUP_DIR="$HOME/Games/Games/VintageStory/saves/robinson-crusoe"
+# SAVE="robinson crusoe.vcdbs"
+#
+BACKUP_DIR="$HOME/Games/Games/VintageStory/saves/OuterWilds"
+SAVE="outerwilds.vcdbs"
+
 SAVE_DIR="$HOME/.config/VintagestoryData/Saves/"
-SAVE="robinson crusoe.vcdbs"
 DATE=$(date +%Y-%m-%d_%H-%M-%S)
 TAR_FILE="$DATE.tar.gz"
 
