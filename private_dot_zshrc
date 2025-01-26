@@ -197,6 +197,8 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # fzf
 alias fpcache="pacman -Qq | fzf --preview 'ls /var/cache/pacman/pkg/{}-[0-9]*.pkg.tar.zst'"
+alias fpact="pacman -Qq | fzf --preview 'pactree -d1 {}'"
+alias fpactr="pacman -Qq | fzf --preview 'pactree -rd1 {}'"
 alias ffont="fc-list | fzf"
 
 # chezmoi
