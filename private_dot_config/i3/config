@@ -470,7 +470,7 @@ set $wp-mokou ~/Pictures/Pictures/东方/86548110_p0.jpg
 set $wp-mystia ~/Pictures/Pictures/东方/111219584_p0.png 
 set $wp-tatara-kogasa ~/Pictures/47516247_p0_pro.jpg 
 
-# exec_always --no-startup-id feh --bg-fill $wp-mystia
+exec_always --no-startup-id feh --bg-fill $wp-mystia
 # exec_always --no-startup-id linux-wallpaperengine 824586497 --silent --screen-root HDMI-0
-exec --no-startup-id bash ~/scripts/random-wallpaper.sh
+# exec --no-startup-id bash ~/scripts/random-wallpaper.sh
 
