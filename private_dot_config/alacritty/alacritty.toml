@@ -1,9 +1,9 @@
 general.import = [
     # Theme
-    "~/.config/alacritty/themes/catppuccin-mocha.toml",
+    # "~/.config/alacritty/themes/catppuccin-mocha.toml",
     # "~/.config/alacritty/themes/tokyo-night-storm.toml",
     # "~/.config/alacritty/themes/tokyo-night.toml",
-    # "~/.config/alacritty/themes/tokyo-night.old.toml",
+    "~/.config/alacritty/themes/tokyo-night.old.toml",
 ]
 
 [env]
