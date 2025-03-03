@@ -412,6 +412,8 @@ no_focus [class="waylyrics"]
 
 for_window [class="kmag"] floating enable sticky enable
 
+for_window [class="Float"] floating enable, resize set 2000 1400, move position center
+
 
 # Assign settings - Special worksapce for applications
 assign [class="firefox"] $ws2
