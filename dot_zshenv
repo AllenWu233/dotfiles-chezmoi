@@ -21,3 +21,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export XDG_MENU_PREFIX=arch-
 
 . "$HOME/.cargo/env"
+
+# Running ollama on Nvidia GPU
+export CUDA_VISIBLE_DEVICES=0
