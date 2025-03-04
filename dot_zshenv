@@ -23,4 +23,4 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 . "$HOME/.cargo/env"
 
 # Running ollama on Nvidia GPU
-export CUDA_VISIBLE_DEVICES=0
+# export CUDA_VISIBLE_DEVICES=GPU-2fadf0e8-4124-8af6-afd8-d672eec57e2b
