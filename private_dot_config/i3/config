@@ -453,6 +453,7 @@ exec --no-startup-id i3-msg 'exec --no-startup-id thunderbird'
 # exec_always --no-startup-id imwheel
 # exec --no-startup-id anacron -s -t "${HOME}/.local/etc/anacrontab" -S "${HOME}/.local/var/spool/anacron"
 exec --no-startup-id fcitx5
+exec --no-startup-id clash-verge
 
 
 # Screen settings
