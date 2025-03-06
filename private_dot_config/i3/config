@@ -373,7 +373,8 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Gvim"] floating enable
 for_window [class="thunderbird"] floating enable 
 for_window [class="KeePassXC"] floating enable 
-for_window [class="PDManer"] floating disable 
+# for_window [class="PDManer"] floating disable 
+for_window [class="Clash-verge"] floating enable 
 
 # for_window [class="^meteo-qt$"] floating enable
 # for_window [class="^meteo-qt$" title="^天气状况$"] move window to position 1800 100
