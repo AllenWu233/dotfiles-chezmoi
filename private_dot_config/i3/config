@@ -489,6 +489,6 @@ set $wp-sunset /home/Allen/Pictures/backgrounds/archlinux/sunset.jpg
 
 # exec_always --no-startup-id feh --bg-fill $wp-mystia
 # exec_always --no-startup-id linux-wallpaperengine 824586497 --silent --screen-root HDMI-0
-exec_always --no-startup-id feh --bg-fill $wp-sunset
-# exec --no-startup-id bash ~/scripts/random-wallpaper.sh
+# exec_always --no-startup-id feh --bg-fill $wp-sunset
+exec --no-startup-id bash ~/scripts/random-wallpaper.sh
 
