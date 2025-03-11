@@ -72,8 +72,8 @@ gaps outer 0
 # quick start
 bindsym $mod+Return workspace $ws1; exec --no-startup-id alacritty  # start a terminal on workspace 1
 # bindsym $mod+Return workspace $ws1; exec --no-startup-id wezterm  # start a terminal on workspace 1
-bindsym $mod+f workspace $ws2; exec --no-startup-id firefox
-bindsym $mod+Shift+f workspace $ws2; exec --no-startup-id firefox -private-window
+bindsym $mod+f workspace $ws2; exec --no-startup-id librewolf
+bindsym $mod+Shift+f workspace $ws2; exec --no-startup-id librewolf -private-window
 bindsym $mod+n workspace $ws3; exec --no-startup-id electron-netease-cloud-music; exec --no-startup-id "killall waylyrics; sleep 1; waylyrics"
 # bindsym $mod+n workspace $ws3; exec --no-startup-id /opt/YesPlayMusic/yesplaymusic; exec --no-startup-id "killall waylyrics; waylyrics"
 # bindsym $mod+n workspace $ws3; exec --no-startup-id spotify; exec --no-startup-id "killall waylyrics; waylyrics"
