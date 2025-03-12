@@ -6,31 +6,31 @@ general.import = [
     "~/.config/alacritty/themes/tokyo-night.old.toml",
 ]
 
-[env]
-WINIT_X11_SCALE_FACTOR = "1.0"
+# [env]
+# WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
-size = 23
+size = 15
 
-[font.bold]
-family = "JetBrainsMono NF"
-style = "Bold"
+# [font.bold]
+# family = "JetBrainsMono NF"
+# style = "Bold"
+#
+# [font.bold_italic]
+# family = "JetBrainsMono NF"
+# style = "Bold Italic"
+#
+# [font.italic]
+# family = "JetBrainsMono NF"
+# style = "Italic"
+#
+# [font.normal]
+# family = "JetBrainsMono NF"
+# style = "Regular"
 
-[font.bold_italic]
-family = "JetBrainsMono NF"
-style = "Bold Italic"
-
-[font.italic]
-family = "JetBrainsMono NF"
-style = "Italic"
-
-[font.normal]
-family = "JetBrainsMono NF"
-style = "Regular"
-
-[window.dimensions]
-columns = 110
-lines = 25
+# [window.dimensions]
+# columns = 110
+# lines = 25
 
 [keyboard]
 bindings = [
