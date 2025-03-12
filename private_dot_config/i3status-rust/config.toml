@@ -1,7 +1,8 @@
 icons_format = "{icon}"
 
 [theme]
-theme = "ctp-mocha"
+# theme = "ctp-mocha"
+theme = "gruvbox-dark"
 
 [icons]
 icons = "material-nf"
