@@ -189,6 +189,7 @@ alias cmd-wrapped='cmd-wrapped -s atuin'
 alias mf='musicfox'
 alias nb="newsboat -r"
 alias rw="random-wallpaper.sh"
+alias rofi="rofi -dpi 1"
 
 # bat
 alias cat="bat"
