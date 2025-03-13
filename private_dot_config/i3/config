@@ -89,7 +89,7 @@ bindsym Mod1+n exec --no-startup-id networkmanager_dmenu -dpi 1
 bindsym Mod1+l exec --no-startup-id "sh ~/.config/rofi/powermenu.sh"
 bindsym Mod1+x exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -dpi 1
 bindsym Mod1+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history -dpi 1 > /dev/null"
-bindsym Mod1+m exec --no-startup-id rofi -modi "emoji:rofimoji" -show emoji -config "~/.config/rofi/grid.rasi" --dpi 1
+bindsym Mod1+m exec --no-startup-id rofi -modi "emoji:rofimoji" -show emoji -config "~/.config/rofi/grid.rasi" -dpi 1
 
 # bindsym $mod+z exec --no-startup-id bwmenu -- -dpi 1
 bindsym $mod+b workspace $ws6; exec --no-startup-id dolphin
@@ -500,6 +500,7 @@ exec --no-startup-id i3-msg 'exec --no-startup-id thunderbird'
 # exec --no-startup-id anacron -s -t "${HOME}/.local/etc/anacrontab" -S "${HOME}/.local/var/spool/anacron"
 exec --no-startup-id fcitx5
 exec --no-startup-id clash-verge
+exec --no-startup-id greenclip daemon
 
 
 # Screen settings
