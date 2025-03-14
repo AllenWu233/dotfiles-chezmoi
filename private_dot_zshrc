@@ -203,6 +203,7 @@ alias ffont="fc-list | fzf"
 alias chr="chezmoi re-add"
 alias cha="chezmoi add"
 alias chg="chezmoi git --"
+alias chf="chezmoi status | awk '{print $2}' | xargs -r chezmoi forget --force"
 
 # config
 alias i3c='nvim ~/.config/i3/config'
@@ -227,6 +228,7 @@ fi
 # eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
+eval "$(chezmoi completion zsh)"
 source <(fzf --zsh)
 
 export ATUIN_NOBIND="true"
