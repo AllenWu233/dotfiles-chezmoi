@@ -226,14 +226,13 @@ fi
 
 # eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
-
+eval $(thefuck --alias)
 source <(fzf --zsh)
 
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
 bindkey '^r' atuin-search
 
-eval $(thefuck --alias)
 
 
 

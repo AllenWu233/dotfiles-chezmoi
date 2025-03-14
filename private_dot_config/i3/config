@@ -420,9 +420,7 @@ for_window [class="thunderbird"] floating enable
 for_window [class="KeePassXC"] floating enable 
 # for_window [class="PDManer"] floating disable 
 for_window [class="Clash-verge"] floating enable 
-
-# for_window [class="^meteo-qt$"] floating enable
-# for_window [class="^meteo-qt$" title="^天气状况$"] move window to position 1800 100
+for_window [class="calc"] floating enable 
 
 for_window [class="^feh$"] floating enable
 # for_window [class="^feh$"] resize set $floating_size_x $floating_size_y
@@ -436,10 +434,6 @@ for_window [class="okular"] floating enable
 # for_window [class="okular"] resize set $floating_size_x $floating_size_y
 # for_window [class="okular"] move window to position $floating_position_x $floating_position_y
 
-# for_window [class="QQ"] floating enable
-# for_window [class="QQ"] resize set $floating_size_x $floating_size_y
-# for_window [class="QQ"] move window to position $floating_position_x $floating_position_y
-
 # Waylyrics
 for_window [class="waylyrics"] floating enable border none sticky enable 
 for_window [class="waylyrics"] resize set 1600 200
@@ -448,16 +442,10 @@ no_focus [class="waylyrics"]
 
 # for_window [class="qBittorrent"] floating enable
 
-# wpsoffice
-# for_window [class="wpsoffice"] floating enable
-# for_window [class="wpsoffice"] resize set $floating_size_x $floating_size_y
-# for_window [class="wpsoffice"] move window to position $floating_position_x $floating_position_y
-# for_window [class="wps"] floating enable
-# for_window [class="wps"] resize set $floating_size_x $floating_size_y
-# for_window [class="wps"] move window to position $floating_position_x $floating_position_y
 
 for_window [class="kmag"] floating enable sticky enable
 
+# Custom class type
 for_window [class="Float"] floating enable, resize set 2000 1400, move position center
 
 
@@ -483,7 +471,7 @@ for_window [class="qBittorrent" title="qBittorrent Enhanced Edition"] move to sc
 
 
 # Startup
-
+#
 # Applications
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc-gruvbox-dark
 exec --no-startup-id redshift
