@@ -19,7 +19,7 @@ export EDITOR=/usr/bin/nvim
 export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export XDG_MENU_PREFIX=arch-
-export LEDGER_FILE="~/Documents/hledger/2025-03-14_.hledger.journal"
+export LEDGER_FILE="$HOME/Documents/hledger/2025-03-14_.hledger.journal"
 
 . "$HOME/.cargo/env"
 
