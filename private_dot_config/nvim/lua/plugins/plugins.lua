@@ -2,6 +2,6 @@
 return {
   {
     "ledger/vim-ledger",
-    ft = { "hledger" },
+    ft = { "ledger" },
   },
 }
