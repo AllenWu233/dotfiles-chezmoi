@@ -65,6 +65,7 @@
   "vim-dadbod": { "branch": "master", "commit": "9f0ca8bcef704659820a95c3bbd2c262583a66a1" },
   "vim-dadbod-completion": { "branch": "master", "commit": "3f5783c12e184e4b6f05dfcbd7c1a6da05b4d66e" },
   "vim-dadbod-ui": { "branch": "master", "commit": "f4d37b7312ae6489e5c04bee654ca521baac188a" },
+  "vim-ledger": { "branch": "master", "commit": "aabf1976dfefe5665233c600421aea2798ff7ea0" },
   "vimtex": { "branch": "master", "commit": "691ee15e1459e4420d207cfbc4a79b383f32b411" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
   "yanky.nvim": { "branch": "main", "commit": "80d9385dbebe7049fd1961d7909b835a58ce9dcc" },
