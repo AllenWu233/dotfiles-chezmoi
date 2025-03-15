@@ -33,8 +33,8 @@ end
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 -- Disable automatic comment wrapping and insertion of comment leaders
--- cmd("autocmd BufEnter * silent! set formatoptions-=cro")
--- cmd("autocmd BufEnter * silent! setlocal formatoptions-=cro")
+cmd("autocmd BufEnter * silent! set formatoptions-=cro")
+cmd("autocmd BufEnter * silent! setlocal formatoptions-=cro")
 
 -- remember fold
 -- cmd("autocmd BufWinLeave * silent! mkview")

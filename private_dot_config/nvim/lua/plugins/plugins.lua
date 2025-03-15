@@ -5,8 +5,13 @@ return {
   --   ft = { "ledger" },
   -- },
 
-  {
-    "nathangrigg/vim-beancount",
-    ft = { "beancount" },
-  },
+  -- {
+  --   "nathangrigg/vim-beancount",
+  --   ft = { "beancount" },
+  -- },
+
+  -- {
+  --   "crispgm/cmp-beancount",
+  --   ft = { "beancount" },
+  -- },
 }
