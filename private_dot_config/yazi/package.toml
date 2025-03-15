@@ -27,3 +27,8 @@ hash = "c40e434318a8ceffd01842f8dfb2390e"
 use = "yazi-rs/flavors:catppuccin-latte"
 rev = "df95930"
 hash = "8c24a91f7e6abb2a9ac268bfbd356e77"
+
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "b4cc9f2"
+hash = "f44c42bcbed3c8564100e45e2fe3649a"
