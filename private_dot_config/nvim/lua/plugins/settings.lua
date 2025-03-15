@@ -20,12 +20,12 @@ return {
     },
   },
 
-  {
-    "ahmedkhalf/project.nvim",
-    opts = {
-      manual_mode = false, -- Set false to auto cd worksapce folder
-    },
-  },
+  -- {
+  --   "ahmedkhalf/project.nvim",
+  --   opts = {
+  --     manual_mode = false, -- Set false to auto cd worksapce folder
+  --   },
+  -- },
 
   -- Set indent width of LSP formatter for c/cpp
   {
@@ -154,32 +154,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        -- "bash",
-        -- "c",
-        -- "diff",
-        -- "html",
-        -- "javascript",
-        -- "jsdoc",
-        -- "json",
-        -- "jsonc",
-        -- "lua",
-        -- "luadoc",
-        -- "luap",
-        -- "markdown",
-        -- "markdown_inline",
-        -- "printf",
-        -- "python",
-        -- "query",
-        -- "regex",
-        -- "toml",
-        -- "tsx",
-        -- "typescript",
-        -- "vim",
-        -- "vimdoc",
-        -- "xml",
-        -- "yaml",
-
-        -- "ledger",
         "beancount",
       },
     },
