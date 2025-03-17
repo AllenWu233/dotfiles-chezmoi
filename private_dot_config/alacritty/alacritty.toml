@@ -1,0 +1,40 @@
+general.import = [
+    # Theme
+    # "~/.config/alacritty/themes/catppuccin-mocha.toml",
+    # "~/.config/alacritty/themes/tokyo-night-storm.toml",
+    # "~/.config/alacritty/themes/tokyo-night.toml",
+    # "~/.config/alacritty/themes/tokyo-night.old.toml",
+    "~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml",
+]
+
+# [env]
+# WINIT_X11_SCALE_FACTOR = "1.0"
+
+[font]
+size = 15
+
+# [font.bold]
+# family = "JetBrainsMono NF"
+# style = "Bold"
+#
+# [font.bold_italic]
+# family = "JetBrainsMono NF"
+# style = "Bold Italic"
+#
+# [font.italic]
+# family = "JetBrainsMono NF"
+# style = "Italic"
+#
+# [font.normal]
+# family = "JetBrainsMono NF"
+# style = "Regular"
+
+# [window.dimensions]
+# columns = 110
+# lines = 25
+
+[keyboard]
+bindings = [
+    { key = "Return", mods = "Super|Shift", action = "SpawnNewInstance" }, # Spawn new instance in same directory
+    { key = "B", mods = "Control|Shift", action = "None" },
+]

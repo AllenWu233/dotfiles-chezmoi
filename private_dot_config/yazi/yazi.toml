@@ -1,0 +1,38 @@
+[manager]
+linemode = "size"
+
+[preview]
+max_width = 1000
+max_height = 800
+
+[opener]
+edit = [{ run = 'nvim "$@"', block = true, for = "unix" }]
+play = [{ run = 'mpv "$@"', orphan = true, for = "unix" }]
+view = [{ run = 'feh "$@"', orphan = true, for = "unix" }]
+open = [{ run = 'xdg-open "$@"', desc = "Open" }]
+drawio = [{ run = '/opt/drawio/drawio "$@"', desc = "drawio" }]
+
+[open]
+prepend_rules = [
+    # { name = "*.jpg", use = "view" },
+    # { name = "*.png", use = "view" },
+    # { name = "*.gif", use = "view" },
+    # { name = "*.webp", use = "view" },
+    # { name = "*.avif", use = "view" },
+    # { name = "*.svg", use = "view" },
+    { name = "*.drawio", use = "drawio" },
+]
+
+[plugin]
+
+prepend_previewers = [
+    # ouch.yazi - Archive previewer
+    { mime = "application/*zip", run = "ouch" },
+    { mime = "application/x-tar", run = "ouch" },
+    { mime = "application/x-bzip2", run = "ouch" },
+    { mime = "application/x-7z-compressed", run = "ouch" },
+    { mime = "application/x-rar", run = "ouch" },
+    { mime = "application/x-xz", run = "ouch" },
+    # mdcat.yazi
+    { name = "*.md", run = "mdcat" },
+]

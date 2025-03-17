@@ -1,0 +1,82 @@
+#######################################
+# Allen's personal i3wm configuration #
+#######################################
+
+include ~/.config/i3/appearence.conf
+include ~/.config/i3/window_rules.conf
+include ~/.config/i3/startup.conf
+include ~/.config/i3/keybindings.conf
+
+# Basic settings
+#
+# font for window titles and bar
+font pango:Noto Sans CJK SC 11.5
+
+# use super(win) key as mod key
+set $mod Mod4
+
+# Default applications
+set $terminal alacritty
+set $browser librewolf
+set $cloud-music electron-netease-cloud-music
+
+# define names for workspaces
+#
+set $ws1    "1"
+set $ws2    "2" 
+set $ws3    "3"
+set $ws4    "4" 
+set $ws5    "5"
+set $ws6    "6"
+set $ws7    "7"
+set $ws8    "8"
+set $ws9    "9"
+set $ws10   "10"
+#
+# set $ws1    "1: "
+# set $ws2    "2: " 
+# set $ws3    "3:󰝚 "
+# set $ws4    "4:󰓓 " 
+# set $ws5    "5:󰍳 "
+# set $ws6    "6: "
+# set $ws7    "7:󱓩 "
+# set $ws8    "8: "
+# set $ws9    "9:󰭹 "
+# set $ws10   "10: "
+
+
+# Special workspace settings for multiple monitors
+# workspace 1 output HDMI-A-0
+# workspace 2 output HDMI-A-0
+# workspace 3 output HDMI-A-0
+# workspace 4 output HDMI-A-0
+# workspace 5 output eDp
+# workspace 6 output eDp
+# workspace 7 output eDp
+# workspace 8 output eDp
+
+
+# Screen, border and gaps
+# use $mod+Mouse to drag floating windows to their wanted position
+floating_modifier $mod
+
+# control focused window when follows the mouse movements
+focus_follows_mouse no
+
+# window border settings
+default_border pixel 2
+# default_floating_border none
+smart_borders on
+
+# hiding borders adjacent to the screen edges
+# hide_edge_borders both
+# new_window normal 0
+# new_float normal 0
+
+# set popups during fullscreen mode
+popup_during_fullscreen all
+
+# i3-gaps
+# smart_gaps off
+gaps inner 0
+gaps outer 0

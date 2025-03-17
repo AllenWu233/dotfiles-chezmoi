@@ -1,0 +1,30 @@
+/** Basic config file **/
+// configuration {
+//   show-icons: true;
+//   font: "JetBrainsMono Nerd Font Mono 20";
+//   modi: "window,drun,ssh,run,filebrowser";
+// }
+// 
+// @theme "nord"
+
+
+configuration {
+    font: "Noto Sans Mono CJK SC:style=Bold 12";
+    display-ssh:    " ";
+    display-run:    " ";
+    display-drun:   " ";
+    display-window: " ";
+    display-combi:  " ";
+    display-clipboard: " ";
+    display-calc: " ";
+    display-p: "⏻ ";
+    show-icons:     true;
+}
+
+@theme "gruvbox-material.rasi"
+
+//@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+//
+//element-icon {
+//    size: 1.85ch;
+//}

@@ -1,0 +1,41 @@
+/* 隐藏侧边栏的Tree Style Tab标题栏，只有切换到TST标签才会隐藏 */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+  #sidebar-header {
+  display: none;
+}
+
+/* Hide header for Sidebar */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+  #sidebar-header {
+  display: none;
+}
+
+/* 隐藏收藏夹书签文字，只显示favicon，当鼠标悬停时展开该书签文字 
+#personal-bookmarks .bookmark-item > .toolbarbutton-text { display:none !important; }
+#personal-bookmarks .bookmark-item:hover > .toolbarbutton-text { display:block !important; }*/
+
+/* 隐藏收藏夹书签文字 更紧凑的风格，以适合放在地址栏左侧 */
+/*#personal-bookmarks .toolbarbutton-text {*/
+/*  display: none !important;*/
+/*  margin-top: -1px !important;*/
+/*}*/
+/*.toolbarbutton-icon {*/
+/*  margin-inline-start: -3px !important;*/
+/*  margin-inline-end: -3px !important;*/
+/*}*/
+
+/* 隐藏顶部标签页，极细化顶部栏，并缩小关闭放大缩小按钮到右上角 */
+#titlebar {
+  margin-bottom: -20px !important;
+}
+#tabbrowser-tabs {
+  visibility: collapse !important;
+}
+#nav-bar {
+  margin-right: 0px !important;
+}
+#TabsToolbar {
+  height: 0px !important;
+  margin-bottom: -26px !important;
+  margin-top: -10px !important;
+}
