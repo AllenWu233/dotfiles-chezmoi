@@ -1,0 +1,37 @@
+{
+  "Transaction Template": {
+    "prefix": "tx",
+    "body": [
+      "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} * \"${1:Description}\"",
+      "  Expenses:${2:Type}         ${3:Amount} CNY",
+      "  Asserts:${4:Account}        -${3} CNY",
+      "",
+      "$0"
+    ],
+    "description": "Standard transaction template"
+  },
+
+  "Meal Template": {
+    "prefix": "meal",
+    "body": [
+      "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} * \"Food\"",
+      "  Expenses:Food:Meal      ${1:Amount} CNY",
+      "  Assets:${2:Wechat}      -${1} CNY",
+      "",
+      "$0"
+    ],
+    "description": "Meal expenses template"
+  },
+
+  "Ingrediant Template": {
+    "prefix": "ingrediant",
+    "body": [
+      "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} * \"Food\"",
+      "  Expenses:Food:Ingrediant       ${1:Amount} CNY",
+      "  Assets:${2:Wechat}         -${1} CNY",
+      "",
+      "$0"
+    ],
+    "description": "Ingrediant expenses template"
+  }
+}
