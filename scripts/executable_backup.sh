@@ -77,3 +77,4 @@ for repo in "${repos[@]}"; do
         exit 1
     }
 done
+printf "\033[32mBackup finished!\033[0m\n"
