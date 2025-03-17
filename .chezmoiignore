@@ -1,4 +1,6 @@
-.git/
-.gitignore
+**/.git/
+**/.git/**
+**/.gitignore
 .aria2/aria2.session
 *.dat
+
