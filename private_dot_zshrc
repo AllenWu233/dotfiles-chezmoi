@@ -231,10 +231,16 @@ alias -s bz2='tar -xjvf'
 #
 if [ ! -n "$DISPLAY" ]; then # If in TTY console
     export STARSHIP_CONFIG=~/.config/starship/starship-tty.toml
+    eval "$(starship init zsh)"
+
     export ZELLIJ_CONFIG_FILE=~/.config/zellij/config-tty.kdl
     eval "$(zellij setup --generate-auto-start zsh)"
 else
-    export STARSHIP_CONFIG=~/.config/starship/starship-nerd-font-symbols.toml
+    # export STARSHIP_CONFIG=~/.config/starship/starship-nerd-font-symbols.toml
+
+    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+    # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
 # eval "$(zellij setup --generate-auto-start zsh)"
@@ -248,10 +254,6 @@ eval "$(atuin init zsh)"
 bindkey '^r' atuin-search
 
 
-
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
 # Functions
