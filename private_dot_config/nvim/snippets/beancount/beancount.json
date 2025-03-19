@@ -24,7 +24,7 @@
   },
 
   "Ingrediant Template": {
-    "prefix": "ingrediant",
+    "prefix": "ingredient",
     "body": [
       "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} * \"Food\"",
       "  Expenses:Food:Ingrediant       ${1:Amount} CNY",
@@ -32,6 +32,6 @@
       "",
       "$0"
     ],
-    "description": "Ingrediant expenses template"
+    "description": "Ingredient expenses template"
   }
 }
