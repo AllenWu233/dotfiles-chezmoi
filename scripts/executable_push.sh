@@ -10,7 +10,7 @@ if [ "$(git log)" ]; then
     while ! git push -u origin main
     do sleep 1
     done
-    echo "Succeed!"
+    echo "Succeeded!"
 else
     echo "Failed!"
 fi
