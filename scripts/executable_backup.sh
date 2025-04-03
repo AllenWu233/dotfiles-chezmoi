@@ -13,6 +13,7 @@ repos=(
 chezmoi_paths=(
     "$HOME/.config/nvim"
     "$HOME/.config/yazi"
+    "$HOME/scripts"
 )
 
 ESC="\e["
