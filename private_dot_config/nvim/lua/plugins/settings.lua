@@ -143,12 +143,12 @@ return {
     },
   },
 
-  {
-    "snacks.nvim",
-    opts = {
-      image = { enabled = true },
-    },
-  },
+  -- {
+  --   "snacks.nvim",
+  --   opts = {
+  --     image = { enabled = true },
+  --   },
+  -- },
 
   {
     "nvim-treesitter/nvim-treesitter",
