@@ -16,7 +16,7 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 -- opt.expandtab = false
 
--- opt.wrap = true
+opt.wrap = true
 opt.linebreak = true
 opt.wrapmargin = 2
 
