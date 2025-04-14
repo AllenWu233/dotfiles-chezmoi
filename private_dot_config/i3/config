@@ -17,7 +17,7 @@ set $mod Mod4
 
 # Default applications
 set $terminal kitty
-set $browser librewolf
+set $browser firefox
 set $cloud-music electron-netease-cloud-music
 
 # define names for workspaces
