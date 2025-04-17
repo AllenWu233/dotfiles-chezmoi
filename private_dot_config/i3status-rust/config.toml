@@ -59,3 +59,15 @@ cmd = "pavucontrol"
 block = "battery"
 # full_threshold = 95
 format = " $icon $percentage {$time_remaining.dur(hms:true, min_unit:m) |}"
+
+# Redshift button
+[[block]]
+block = "custom"
+command = "~/.config/redshift/redshift-toggle.sh status"
+interval = 1
+[[block.click]]
+button = "left"
+cmd = "~/.config/redshift/redshift-toggle.sh toggle"
+[[block.click]]
+button = "right"
+cmd = "notify-send 'Redshift' '护眼模式'"
