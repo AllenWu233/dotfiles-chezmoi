@@ -70,4 +70,15 @@ button = "left"
 cmd = "~/.config/redshift/redshift-toggle.sh toggle"
 [[block.click]]
 button = "right"
-cmd = "notify-send 'Redshift' '护眼模式'"
+cmd = "~/.config/redshift/redshift-toggle.sh toggle"
+
+[[block]]
+block = "custom"
+command = "~/.config/i3status-rust/tomato_clock.sh"
+interval = 1
+[[block.click]]
+button = "left"
+cmd = "~/.config/i3status-rust/tomato_clock.sh left"
+[[block.click]]
+button = "right"
+cmd = "~/.config/i3status-rust/tomato_clock.sh right"
