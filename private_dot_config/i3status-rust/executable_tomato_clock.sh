@@ -1,10 +1,14 @@
 #!/bin/bash
-# Tomato Clock script with start/pause and mode toggle for i3status-rust
-# Generate by Copilot
+# Tomato Clock script with start/pause, mode toggle, and sound effects for i3status-rust
 
 # Set durations (in seconds)
 WORK_DURATION=$((25 * 60)) # 25 minutes
 BREAK_DURATION=$((5 * 60)) # 5 minutes
+
+# Paths to sound effects (update these paths to match your system)
+CLICK_SOUND="$HOME/.config/i3status-rust/click_stereo.ogg"
+BREAK_SOUND="$HOME/.config/i3status-rust/levelup.ogg"
+WORK_SOUND="$HOME/.config/i3status-rust/successful_hit.ogg"
 
 # State file to persist timer across restarts
 STATE_FILE="/tmp/tomato_clock_state"
@@ -20,12 +24,21 @@ fi
 # Load state
 source $STATE_FILE
 
+# Function to play sound using mpv
+play_sound() {
+    local sound_file=$1
+    if [[ -f $sound_file ]]; then
+        mpv --no-terminal --quiet "$sound_file" &
+    fi
+}
+
 # Handle click events
 if [[ $1 == "left" ]]; then
     # Left click: Start/Pause the timer
     if [[ $state == "not_started" || $state == "stopped" ]]; then
         state="running"
         start_time=$(date +%s)
+        play_sound "$CLICK_SOUND"
         notify-send "Tomato Clock" "Timer started! ⏰"
     elif [[ $state == "running" ]]; then
         state="stopped"
@@ -33,6 +46,7 @@ if [[ $1 == "left" ]]; then
         current_time=$(date +%s)
         elapsed=$((current_time - start_time))
         remaining=$((remaining - elapsed))
+        play_sound "$CLICK_SOUND"
         notify-send "Tomato Clock" "Timer paused. ⏰"
     fi
     # Save state and exit
@@ -46,10 +60,12 @@ elif [[ $1 == "right" ]]; then
     if [[ $mode == "work" ]]; then
         mode="break"
         remaining=$BREAK_DURATION
+        play_sound "$BREAK_SOUND"
         notify-send "Tomato Clock" "Switched to Break Mode ☕"
     else
         mode="work"
         remaining=$WORK_DURATION
+        play_sound "$WORK_SOUND"
         notify-send "Tomato Clock" "Switched to Work Mode 🍅"
     fi
     # Save state and exit
@@ -69,15 +85,16 @@ if [[ $state == "running" ]]; then
         if [[ $mode == "work" ]]; then
             mode="break"
             remaining=$BREAK_DURATION
+            play_sound "$BREAK_SOUND"
             notify-send "Tomato Clock" "Work session complete! Time for a break ☕"
         else
             mode="work"
             remaining=$WORK_DURATION
+            play_sound "$WORK_SOUND"
             notify-send "Tomato Clock" "Break time over! Back to work 🍅"
         fi
-        # Reset timer but keep it paused
-        state="stopped"
-        start_time=0
+        # Keep the timer running after switching modes
+        start_time=$current_time
     else
         # Update remaining time
         remaining=$((remaining - elapsed))

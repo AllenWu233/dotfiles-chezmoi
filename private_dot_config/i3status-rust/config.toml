@@ -63,14 +63,14 @@ format = " $icon $percentage {$time_remaining.dur(hms:true, min_unit:m) |}"
 # Redshift button
 [[block]]
 block = "custom"
-command = "~/.config/redshift/redshift-toggle.sh status"
+command = "~/.config/i3status-rust/redshift-toggle.sh status"
 interval = 1
 [[block.click]]
 button = "left"
-cmd = "~/.config/redshift/redshift-toggle.sh toggle"
+cmd = "~/.config/i3status-rust/redshift-toggle.sh toggle"
 [[block.click]]
 button = "right"
-cmd = "~/.config/redshift/redshift-toggle.sh toggle"
+cmd = "~/.config/i3status-rust/redshift-toggle.sh toggle"
 
 [[block]]
 block = "custom"
