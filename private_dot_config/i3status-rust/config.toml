@@ -72,13 +72,18 @@ cmd = "~/.config/i3status-rust/redshift-toggle.sh toggle"
 button = "right"
 cmd = "~/.config/i3status-rust/redshift-toggle.sh toggle"
 
+# Pomodoro Technique
 [[block]]
 block = "custom"
-command = "~/.config/i3status-rust/tomato_clock.sh"
+command = "~/.config/i3status-rust/tomato_clock_cycle.sh"
+# command = "~/.config/i3status-rust/tomato_clock.sh"
 interval = 1
+json = true
 [[block.click]]
 button = "left"
-cmd = "~/.config/i3status-rust/tomato_clock.sh left"
+cmd = "~/.config/i3status-rust/tomato_clock_cycle.sh left"
+# cmd = "~/.config/i3status-rust/tomato_clock.sh left"
 [[block.click]]
 button = "right"
-cmd = "~/.config/i3status-rust/tomato_clock.sh right"
+cmd = "~/.config/i3status-rust/tomato_clock_cycle.sh right"
+# cmd = "~/.config/i3status-rust/tomato_clock.sh right"

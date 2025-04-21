@@ -1,5 +1,5 @@
 #!/bin/bash
-# Tomato Clock script with start/pause, mode toggle, and sound effects for i3status-rust
+# Tomato Clock script with start/pause, mode toggle, sound effects, and i3status-rust color support
 
 # Set durations (in seconds)
 WORK_DURATION=$((25 * 60)) # 25 minutes
@@ -108,21 +108,21 @@ echo "mode=$mode" >>$STATE_FILE
 echo "remaining=$remaining" >>$STATE_FILE
 echo "start_time=$start_time" >>$STATE_FILE
 
-# Format output
+# Format output with JSON for i3status-rust
 if [[ $state == "not_started" ]]; then
-    echo "🍅"
+    echo '{"text": "󰉛"}'
 elif [[ $state == "stopped" ]]; then
     if [[ $mode == "work" ]]; then
-        echo "🍅 P $((remaining / 60))m$((remaining % 60))s"
+        echo '{"text": "󰉛 '"$((remaining / 60))"'m'"$((remaining % 60))"'s", "state": "Warning"}'
     else
-        echo "☕ P $((remaining / 60))m$((remaining % 60))s"
+        echo '{"text": "󰶟 '"$((remaining / 60))"'m'"$((remaining % 60))"'s", "state": "Warning"}'
     fi
 elif [[ $state == "running" ]]; then
     if [[ $mode == "work" ]]; then
-        echo "🍅 $((remaining / 60))m$((remaining % 60))s"
+        echo '{"text": "󰉛 '"$((remaining / 60))"'m'"$((remaining % 60))"'s", "state": "Good"}'
     else
-        echo "☕ $((remaining / 60))m$((remaining % 60))s"
+        echo '{"text": "󰶟 '"$((remaining / 60))"'m'"$((remaining % 60))"'s", "state": "Good"}'
     fi
 else
-    echo "🍅"
+    echo '{"text": "󰉛"}'
 fi
