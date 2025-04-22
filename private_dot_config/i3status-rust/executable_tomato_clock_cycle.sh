@@ -4,7 +4,7 @@
 # Set durations (in seconds)
 WORK_DURATION=$((25 * 60))       # 25 minutes
 BREAK_DURATION=$((5 * 60))       # 5 minutes
-LONG_BREAK_DURATION=$((20 * 60)) # 20 minutes
+LONG_BREAK_DURATION=$((15 * 60)) # 15 minutes
 CYCLES_BEFORE_LONG_BREAK=4       # Number of cycles before a long break
 
 # Paths to sound effects (update these paths to match your system)
