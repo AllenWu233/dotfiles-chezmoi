@@ -197,6 +197,7 @@ alias nb="newsboat -r"
 alias rw="random-wallpaper.sh"
 alias rofi="rofi -dpi 1"
 alias py="pdm run python"
+alias s="kitten ssh"
 
 # bat
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
