@@ -183,7 +183,8 @@ alias tree='lsd --tree'
 alias tree1='lsd --tree --depth 1'
 alias tree2='lsd --tree --depth 2'
 alias yazi='env LANG=zh_CN.UTF-8 LANGUAGE=zh_CN yazi'
-alias rm="echo This is not the command you are looking for. Use \'trash\' instead.; false"
+# alias rm="echo This is not the command you are looking for. Use \'trash\' instead.; false"
+alias rm="rm -i"
 alias get-ip="ip -4 addr | rg -i ppp0 -i | rg -i inet"
 alias pac="sudo pacman -Syu"
 # alias \$=' '
