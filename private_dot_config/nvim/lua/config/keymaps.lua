@@ -4,11 +4,11 @@
 local map = vim.keymap.set
 
 -- Leader key
-vim.g.mapleader = " "
+-- vim.g.mapleader = " "
 
 -- ---------- INSERT mode ---------- --
-map("i", "jk", "<ESC>")
-map("i", "kj", "<ESC>")
+-- map("i", "jk", "<ESC>")
+-- map("i", "kj", "<ESC>")
 
 -- ---------- VISUAL mode ---------- --
 -- map("v", "jk", "<ESC>")

@@ -134,7 +134,7 @@ return {
               -- { find = "compiler" },
               { find = "SUCCESS" },
               { find = "FAILURE" },
-              { find = "# Plugin Updates" },
+              -- { find = "# Plugin Updates" },
             },
           },
           opts = { skip = true },
