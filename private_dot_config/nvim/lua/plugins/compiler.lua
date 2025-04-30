@@ -5,6 +5,7 @@ return {
     dependencies = { "stevearc/overseer.nvim", "nvim-telescope/telescope.nvim" },
     opts = {},
   },
+
   { -- The task runner we use
     "stevearc/overseer.nvim",
     commit = "6271cab7ccc4ca840faa93f54440ffae3a3918bd",

@@ -2,6 +2,7 @@ return {
   "echasnovski/mini.files",
   enabled = true,
   lazy = false,
+
   keys = {
     {
       "<leader>e",
@@ -18,6 +19,7 @@ return {
       desc = "Open mini.files (cwd)",
     },
   },
+
   opts = {
     mappings = {
       go_in_vertical = "<C-V>",
