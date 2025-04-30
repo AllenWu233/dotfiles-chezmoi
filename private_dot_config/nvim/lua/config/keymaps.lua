@@ -21,15 +21,28 @@ map("n", "<C-X>", "ggdG", { desc = "Delete All" })
 -- map("n", "<leader>=", "gg=G", { desc = "Auto Indent" })
 
 -- Move cursor
-map("n", "<leader>j", "<C-w>j", { desc = "Move Down" })
-map("n", "<leader>k", "<C-w>k", { desc = "Move Up" })
-map("n", "<leader>h", "<C-w>h", { desc = "Move Left" })
-map("n", "<leader>l", "<C-w>l", { desc = "Move Right" })
+-- map("n", "<leader>j", "<C-w>j", { desc = "Move Down" })
+-- map("n", "<leader>k", "<C-w>k", { desc = "Move Up" })
+-- map("n", "<leader>h", "<C-w>h", { desc = "Move Left" })
+-- map("n", "<leader>l", "<C-w>l", { desc = "Move Right" })
 
 -- Buffers
-map("n", "X", function()
+-- map("n", "X", function()
+--   Snacks.bufdelete()
+-- end, { desc = "Delete Buffer" })
+
+map("n", "<C-w>N", "<cmd>enew<cr>", { desc = "New File in Current Window" })
+map("n", "<leader>wN", "<cmd>enew<cr>", { desc = "New File in Current Window" })
+map("n", "<leader>r", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
+map("n", "<leader>xc", "<cmd>Trouble close<cr>", { desc = "Close Trouble Window" })
+map("n", "<D-s>", "<cmd>w<cr>", { desc = "Save" })
+map("i", "<D-s>", "<Esc><cmd>w<cr>a", { desc = "Save" })
+
+map("n", "<leader><delete>", function()
   Snacks.bufdelete()
-end, { desc = "Delete Buffer" })
+end, { desc = "Close Buffer" })
+map("n", "<leader><CR>", "<cmd>%bd<cr>", { desc = "Close All Buffers" })
+map("n", "<leader>bo", Snacks.bufdelete.other, { desc = "Close Other Buffers" })
 
 -- Fold or unfold
 -- map("n", "<leader>a", "za", { desc = "Switch Fold" })
