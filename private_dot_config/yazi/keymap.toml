@@ -56,3 +56,10 @@ desc = "Compress with ouch"
 on = "<C-y>"
 run = "plugin system-clipboard"
 desc = "Copy to system clipboard"
+
+# serachjump.yazi
+[[manager.prepend_keymap]]
+on = ["i"]
+run = "plugin searchjump"
+# run = "plugin searchjump -- autocd"
+desc = "searchjump mode"

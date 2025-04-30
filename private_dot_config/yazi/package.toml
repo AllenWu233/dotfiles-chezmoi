@@ -18,6 +18,11 @@ use = "GrzegorzKozub/mdcat"
 rev = "d3d5089"
 hash = "40c20e6c1085d1f45309b9f148bf4f6e"
 
+[[plugin.deps]]
+use = "DreamMaoMao/searchjump"
+rev = "de54414"
+hash = "23e063e40a8dcded2a37c5433a627846"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "df95930"
