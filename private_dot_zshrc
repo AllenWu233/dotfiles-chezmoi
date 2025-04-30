@@ -201,8 +201,8 @@ alias py="pdm run python"
 alias s="kitten ssh"
 
 # bat
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
-alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+# alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+# alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # fzf
 alias fpcache="pacman -Qq | fzf --preview 'ls /var/cache/pacman/pkg/{}-[0-9]*.pkg.tar.zst'"

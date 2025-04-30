@@ -38,5 +38,9 @@ opt.scrolloff = 999
 
 -- opt.foldmethod = "manual"
 
+-- Disable netrw
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+
 -- ---------- LazyVim ---------- --
 g.snacks_animate = false
