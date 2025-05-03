@@ -28,5 +28,5 @@ export BEANCOUNT_FILE="$HOME/Documents/beancount/2025.beancount"
 # export CUDA_VISIBLE_DEVICES=GPU-2fadf0e8-4124-8af6-afd8-d672eec57e2b
 
 # Clash Verge
-export http_proxy="http://127.0.0.1:7897"
-export https_proxy="http://127.0.0.1:7897"
+# export http_proxy="http://127.0.0.1:7897"
+# export https_proxy="http://127.0.0.1:7897"
