@@ -18,7 +18,7 @@ main_window_color = white
 execute_on_song_change = notify-send "♫ Now Playing" "$(mpc current)"
 
 playlist_display_mode = "classic"
-user_interface = classic
+user_interface = alternative
 header_visibility = "no"
 statusbar_visibility = "no"
 titles_visibility = "no"
