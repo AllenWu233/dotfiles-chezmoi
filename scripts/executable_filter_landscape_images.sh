@@ -23,7 +23,7 @@ done
 
 if [[ $found -eq 1 ]]; then
     dolphin "$output_dir"
-    notify-send "🖼️ 筛选横向图片" "未发现横向图片。"
+    notify-send "🖼️ 筛选横向图片" "筛选完毕！已建立软链接。"
 else
     notify-send "🖼️ 筛选横向图片" "未发现横向图片。"
 fi
