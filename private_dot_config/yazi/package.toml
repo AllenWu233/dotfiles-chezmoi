@@ -1,39 +1,39 @@
 [[plugin.deps]]
 use = "h-hg/yamb"
-rev = "3f7c51f"
-hash = "e11b980e5635f0fbabd80931b1a1347e"
+rev = "22af003"
+hash = "7cc42012a7c2099f80064d228feb8d44"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "ce6fb75"
-hash = "ed6c185514109d7c5463f609282b220c"
+rev = "10b4627"
+hash = "3ec6a973d506665f1570a9fe08343fd8"
 
 [[plugin.deps]]
 use = "orhnk/system-clipboard"
-rev = "7775a80"
+rev = "efb8f03"
 hash = "9b8f2573da54334b04747e51556040cc"
 
 [[plugin.deps]]
 use = "GrzegorzKozub/mdcat"
-rev = "d3d5089"
+rev = "7b7380a"
 hash = "40c20e6c1085d1f45309b9f148bf4f6e"
 
 [[plugin.deps]]
 use = "DreamMaoMao/searchjump"
-rev = "de54414"
-hash = "23e063e40a8dcded2a37c5433a627846"
+rev = "fe884f4"
+hash = "b4c00ef6899a9563af8d577d0bb46998"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "df95930"
-hash = "c40e434318a8ceffd01842f8dfb2390e"
+rev = "d04a298"
+hash = "288a0dedd5d13b28605cf82c05326dcd"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-latte"
-rev = "df95930"
-hash = "8c24a91f7e6abb2a9ac268bfbd356e77"
+rev = "d04a298"
+hash = "a4d508772dc7b20d739a2f9a1d2d396f"
 
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
-rev = "b4cc9f2"
-hash = "f44c42bcbed3c8564100e45e2fe3649a"
+rev = "91fdfa7"
+hash = "f48f510e5505f5d01e79c4f8257ec5cb"
