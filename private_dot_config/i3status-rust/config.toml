@@ -55,6 +55,7 @@ action = "toggle_mute"
 button = "right"
 cmd = "pavucontrol"
 
+
 [[block]]
 block = "battery"
 # full_threshold = 95
